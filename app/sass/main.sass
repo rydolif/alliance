@@ -1,0 +1,58 @@
+@import "libs"
+@import "base"
+
+
+.container
+	width: 100%
+	max-width: 1200px
+	padding: 0 15px
+	margin: 0 auto
+
+	+r(1200)
+		max-width: 992px
+
+	+r(992)
+		max-width: 767px
+
+	+r(767)
+		max-width: 576px
+
+	+r(576)
+		max-width: 100%
+
+
+.header
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+
+	&__container
+		+between
+
+	&__logo
+		img
+			width: 130px
+			height: auto
+
+
+.nav
+	ul
+		+between
+
+	li
+		margin-right: 25px
+
+		&:last-child
+			margin-right: 0
+
+
+.main
+	+cover
+
+
+.footer
+	&__container
+
+
+@import "page"
