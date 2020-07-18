@@ -1,5 +1,9 @@
 $(function() {
 
+  $('select').styler({
+    selectSearch: true
+  });
+
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
 
@@ -107,7 +111,7 @@ $(function() {
 
 //-------------------------------анімація цифр---------------------------------------
   var show = true;
-  var countbox = ".about-statistics__container";
+  var countbox = ".info";
   $(window).on("scroll load resize", function () {
       if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
       var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
@@ -116,7 +120,7 @@ $(function() {
       var d_height = $(document).height(); // Высота всего документа
       var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
       if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-          $('.about-statistics__item h3').spincrement({
+          $('.info__list_number span').spincrement({
               thousandSeparator: "",
               duration: 2000
           });

@@ -26,23 +26,110 @@
 				</span>
 			</button>
 
-			<nav class="nav">
-				<ul>
-					<li><a href="index.html">Головна</a></li>
-					<li><a href="catalog.html">Наші послуги</a></li>
-					<li><a href="about.html">Виконанні роботи</a></li>
-					<li><a href="contacts.html">Контакти</a></li>
+			<nav class="header__nav nav">
+				<ul class="header__nav_list">
+					<li><a href="#">О нас</a></li>
+					<li>
+						<a href="#">Услуги <span></span></a>
+						<ul>
+							<li><a href="#">Оценка коммерческой недвижимости</a></li>
+							<li><a href="#">Оценка бизнеса</a></li>
+							<li><a href="#">Судебная экспертиза</a></li>
+							<li><a href="#">Оценка воздушных, морских и речных судов</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Вопрос/ответ</a></li>
+					<li><a href="#">Контакты</a></li>
 				</ul>
 			</nav>
+
+			<a href="tel:800012345678" class="header__tel">8 000 123 456 78</a>
 
 		</div>
 	</header>
 
-	<section class="">
-		<div class="container">
-			<h1>Start</h1>
+	<section class="hero">
+		<div class="hero__container container">
+
+			<div class="hero__text">
+				<h1>Независимая <br>оценка <br>собственности</h1>
+				<ul>
+					<li><a href="#"><span>Оценка</span> <br><span>коммерческой</span> <br><span>недвижимости</span></a></li>
+					<li><a href="#"><span>Оценка</span> <br><span>бизнеса</span></a></li>
+					<li><a href="#"><span>Судебная</span> <br><span>экспертиза</span></a></li>
+					<li><a href="#"><span>Оценка</span> <br><span>воздушных, морских</span> <br><span>и речных судов</span></a></li>
+				</ul>
+			</div>
+
+			<form class="hero__form">
+				<p class="hero__form_title">Закажите оценку за 1 клик!</p>
+				<div class="hero__form_line">
+					<select>
+						<option value="Объект оценки" selected>Объект оценки</option>
+						<option value="Оценка коммерческой недвижимости">Оценка коммерческой недвижимости</option>
+						<option value="Оценка бизнеса">Оценка бизнеса</option>
+						<option value="Судебная экспертиза">Судебная экспертиза</option>
+						<option value="Оценка воздушных, морских и речных судов">Оценка воздушных, морских и речных судов</option>
+					</select>
+				</div>
+				<div class="hero__form_line">
+					<input type="text" name="name" placeholder="Имя">
+				</div>
+				<div class="hero__form_line">
+					<input type="tel" name="tel" placeholder="Телефон">
+				</div>
+				<div class="hero__form_line">
+					<input type="email" name="mail" placeholder="Email">
+				</div>
+				<div class="hero__form_checkbox">
+					<input type="checkbox" id="remember">
+					<label for="remember">даю согласие на сбор, обработку, использование моих персональных данных</label>
+				</div>
+				<div class="hero__form_btn">
+					<button class="btn">Заказать оценку</button>
+				</div>
+			</form>
+
 		</div>
 	</section>
+
+	<section class="info">
+		<div class="container">
+
+			<div class="info__wrap">
+				<img src="img/info--number.png" alt="">
+				<p>крупных <br>клиентов <br>доверяют <br>нам</p>
+			</div>
+
+			<div class="info__list">
+				<div class="info__list_item">
+					<div class="info__list_number"><span>5</span>+</div>
+					<p>лет <br>в оценке</p>
+				</div>
+				<div class="info__list_item">
+					<div class="info__list_number"><span>300</span>+</div>
+					<p>отчетов <br>об оценке</p>
+				</div>
+				<div class="info__list_item">
+					<div class="info__list_number"><span>100</span>+</div>
+					<p>судебных <br>экспертиз</p>
+				</div>
+				<div class="info__list_item">
+					<div class="info__list_number"><span>100</span>%</div>
+					<p>гарантия <br>качества</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<sectio class="property">
+		<div class="container">
+			
+			<div class="property__title title">
+				<h2>Оценка <br>коммерческой <br>недвижимости </h2>
+			</div>
+		</div>
+	</sectio>
 
 	<footer class="footer">
 		<div class="footer__container container"></div>
@@ -81,6 +168,9 @@
 	</div>
 
 	<script src="js/scripts.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@2.0.2/dist/jquery.formstyler.min.js"></script>
 
 </body>
 </html>

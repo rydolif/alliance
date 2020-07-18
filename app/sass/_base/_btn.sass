@@ -3,15 +3,34 @@
 	display: flex
 	justify-content: center
 	align-items: center
-	height: 45px
-	font-size: 18px
-	color: $accent
-	font-weight: 700
-	border-radius: 20px
-	max-width: fit-content
+	height: 40px
+	width: 100%
+	background: linear-gradient(to bottom, rgba(0,111,190,1) 0%, rgba(0,111,190,1) 1%, rgba(31,53,154,1) 100%)
+	z-index: 1
+	font-size: 16px
+	color: #ffffff
+	text-transform: uppercase
+	letter-spacing: 0.5px
+	
+
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		background-color: $orange
+		z-index: -1
+		opacity: 0
+		+transition
 
 	&:hover,
 	&:focus
-		border: 1px solid $accent
-		background: $accent
 		color: #fff
+
+		&::before
+			opacity: 1

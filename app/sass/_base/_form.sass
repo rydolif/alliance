@@ -1,13 +1,15 @@
-form
 
-input, textarea, select
+select
+	display: none
+
+input, textarea
 	width: 100%
-	border: 1px solid #ebebeb
+	border: 1px solid transparent
 	outline: none
 	box-shadow: none
 	// -webkit-appearance: none
-	font-size: 16px
-	box-shadow: 0 0 6px rgba(42, 63, 125, 0.34)
+	color: #ffffff
+	+transition
 	
 	&:focus:required:invalid
 		border-color: red
@@ -22,22 +24,26 @@ input, textarea, select
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #c4c4c4
-		font-size: 12px
-		line-height: 50px
+		color: $text
 
-input, select
-	height: 50px
-	line-height: 50px
-	padding: 0 25px
+input
+	height: 35px
+	line-height: 35px
+	padding: 0 40px
 
 	&::placeholder
-		line-height: 50px
-		font-size: 16px
+		line-height: 35px
+
 
 textarea
 	&::placeholder
 		line-height: 1.4
+
+
+button
+	cursor: pointer
+	border: 0
+
 
 label.error
 	position: absolute
@@ -63,3 +69,4 @@ label.error
 		border-left: 4px solid transparent
 		border-right: 4px solid transparent
 		border-top: 4px solid transparent
+
