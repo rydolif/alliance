@@ -527,7 +527,7 @@ h2
 		flex-wrap: wrap
 		z-index: 1
 
-		+r(767)
+		+r(992)
 			justify-content: space-around
 
 	&__item
@@ -546,9 +546,7 @@ h2
 
 		+r(992)
 			width: 49%
-
-		+r(767)
-			background-color: #ffffff !important
+			background-color: rgba(#fff, .45) !important
 			margin-bottom: 10px
 			box-shadow: 0 0 5px 0 rgba($accent, .3)
 
@@ -562,6 +560,7 @@ h2
 		&:hover,
 		&:focus
 			background-color: rgba(#fff, .25)
+			// transform: rotateY(-360deg)
 
 			.btn
 				opacity: 1
@@ -577,9 +576,8 @@ h2
 			color: #ffffff
 			font-weight: 700
 
-			+r(767)
+			+r(992)
 				font-size: 14px
-				color: $text
 
 		svg
 			height: 50px
@@ -599,9 +597,6 @@ h2
 			color: #ffffff
 			padding: 12px 0
 			opacity: 0
-
-			+r(767)
-				color: $text
 
 			p
 				text-indent: 15px
@@ -637,7 +632,7 @@ h2
 	&__list
 		margin-top: -100px
 
-		+r(992)
+		+r(1200)
 			margin-top: 0
 
 	&__item
