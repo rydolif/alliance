@@ -28,18 +28,18 @@
 
 			<nav class="header__nav nav">
 				<ul class="header__nav_list">
-					<li><a href="#">О нас</a></li>
-					<li>
-						<a href="#">Услуги <span></span></a>
+					<li class="click"><a href="#info">О нас</a></li>
+					<li class="click">
+						<a href="#property">Услуги <span></span></a>
 						<ul>
-							<li><a href="#">Оценка коммерческой недвижимости</a></li>
-							<li><a href="#">Оценка бизнеса</a></li>
-							<li><a href="#">Судебная экспертиза</a></li>
-							<li><a href="#">Оценка воздушных, морских и речных судов</a></li>
+							<li class="click"><a href="#property">Оценка коммерческой недвижимости</a></li>
+							<li class="click"><a href="#business">Оценка бизнеса</a></li>
+							<li class="click"><a href="#business">Судебная экспертиза</a></li>
+							<li class="click"><a href="#examination">Оценка воздушных, морских и речных судов</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Вопрос/ответ</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li class="click"><a href="#question">Вопрос/ответ</a></li>
+					<li class="click"><a href="#contacts">Контакты</a></li>
 				</ul>
 			</nav>
 
@@ -61,10 +61,10 @@
 				</ul>
 			</div>
 
-			<form class="hero__form">
+			<form class="hero__form form" method="POST">
 				<p class="hero__form_title">Закажите оценку за 1 клик!</p>
-				<div class="hero__form_line">
-					<select>
+				<div class="hero__form_line hero__form_select">
+					<select required>
 						<option value="Объект оценки" selected>Объект оценки</option>
 						<option value="Оценка коммерческой недвижимости">Оценка коммерческой недвижимости</option>
 						<option value="Оценка бизнеса">Оценка бизнеса</option>
@@ -73,16 +73,16 @@
 					</select>
 				</div>
 				<div class="hero__form_line">
-					<input type="text" name="name" placeholder="Имя">
+					<input type="text" name="name" placeholder="Имя" required>
 				</div>
 				<div class="hero__form_line">
-					<input type="tel" name="tel" placeholder="Телефон">
+					<input type="tel" name="phone" placeholder="Телефон" required>
 				</div>
 				<div class="hero__form_line">
-					<input type="email" name="mail" placeholder="Email">
+					<input type="email" name="mail" placeholder="Email" required>
 				</div>
 				<div class="hero__form_checkbox">
-					<input type="checkbox" id="remember">
+					<input type="checkbox" id="remember" checked required>
 					<label for="remember">даю согласие на сбор, обработку, использование моих персональных данных</label>
 				</div>
 				<div class="hero__form_btn">
@@ -93,7 +93,7 @@
 		</div>
 	</section>
 
-	<section class="info">
+	<section class="info" id="info">
 		<div class="container">
 
 			<div class="info__wrap">
@@ -122,7 +122,7 @@
 		</div>
 	</section>
 
-	<section class="property">
+	<section class="property" id="property">
 		<div class="container">
 			
 			<div class="property__title title">
@@ -143,7 +143,7 @@
 						</svg>
 						<span>Для целей <br>купли-продажи <br>от 5 000 руб.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="property__item">
@@ -176,7 +176,7 @@
 							<b>Возможен комплексный подход по реализации проекта.</b>
 						</p>
 					</div>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="property__item">
@@ -207,7 +207,7 @@
 							<b>Возможен комплексный подход по реализации проекта.</b>
 						</p>
 					</div>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="property__item">
@@ -235,7 +235,7 @@
 							<b>Возможен комплексный подход по реализации проекта.</b>
 						</p>
 					</div>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="property__item">
@@ -247,7 +247,7 @@
 						</svg>
 						<span>Для подтверждения <br>стоимости при сделке <br>с Банком От 20 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="property__item">
@@ -259,7 +259,7 @@
 						</svg>
 						<span>Для иных целей <br>От 10 000 р</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 			</div>
@@ -267,7 +267,7 @@
 		</div>
 	</section>
 
-	<section class="business">
+	<section class="business" id="business">
 		<div class="container">
 			
 			<div class="business__title title">
@@ -287,7 +287,7 @@
 						</svg>
 						<span>Оценка доли <br>в уставном капитале <br>От 10 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="business__item property__item">
@@ -304,7 +304,7 @@
 						</svg>
 						<span>Оценка <br>для нотариуса <br>От 5 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="business__item property__item">
@@ -321,7 +321,7 @@
 						</svg>
 						<span>Оценка <br>ценных бумаг <br>От 30 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="business__item property__item">
@@ -334,7 +334,7 @@
 						</svg>
 						<span>Оценка <br>имущественного комплекса <br>От 30 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="business__item property__item">
@@ -348,7 +348,7 @@
 						</svg>
 						<span>Оценка <br>дебиторской задолженности <br>От 20 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 			</div>
@@ -356,7 +356,7 @@
 		</div>
 	</section>
 
-	<section class="examination property">
+	<section class="examination property" id="examination">
 		<div class="container">
 			
 			<div class="examination__title title">
@@ -377,7 +377,7 @@
 						</svg>
 						<span>Для Московского <br>городского суда <br>От 50 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="examination__item property__item">
@@ -389,7 +389,7 @@
 						</svg>
 						<span>Для 1-го Апелляционного суда <br>общей юрисдикции <br>От 60 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="examination__item property__item item--remove"></div>
@@ -403,7 +403,7 @@
 						</svg>
 						<span>Для Арбитражного суда <br>города Москвы <br>От 40 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="examination__item property__item">
@@ -415,7 +415,7 @@
 						</svg>
 						<span>Для Московского <br>областного суда <br>От 40 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 			</div>
@@ -423,7 +423,7 @@
 		</div>
 	</section>
 
-	<section class="sea business">
+	<section class="sea business" id="sea">
 		<div class="container">
 			
 			<div class="sea__title title">
@@ -441,7 +441,7 @@
 						</svg>
 						<span>Воздушные суда <br>От 5 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="sea__item property__item">
@@ -457,7 +457,7 @@
 						</svg>
 						<span>Морские суда <br>От 4 000 р.</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 				<div class="sea__item property__item">
@@ -469,7 +469,7 @@
 						</svg>
 						<span>Речные суда <br>От 3 000 р..</span>
 					</p>
-					<a href="#" class="btn">Заказать услугу</a>
+					<a href="#" class="order_open btn">Заказать услугу</a>
 				</div>
 
 			</div>
@@ -477,7 +477,7 @@
 		</div>
 	</section>
 
-	<section class="question">
+	<section class="question" id="question">
 		<div class="container">
 			<div class="question__container">
 				<h2>Вопрос / ответ</h2>
@@ -591,7 +591,7 @@
 		</div>
 	</section>
 
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="contacts__container container">
 
 			<div class="contacts__content">
@@ -654,16 +654,16 @@
 						<a href="email:info@alomsk.ru">info@alomsk.ru</a>
 					</li>
 				</ul>
-				<form class="contacts__content_form">
+				<form class="contacts__content_form form" method="POST">
 					<h2>Напишите нам</h2>
 					<div class="hero__form_line">
 						<input type="text" name="name" placeholder="Имя">
 					</div>
 					<div class="hero__form_line">
-						<input type="tel" name="tel" placeholder="Телефон">
+						<input type="tel" name="phone" placeholder="Телефон">
 					</div>
 					<div class="hero__form_line">
-						<textarea name="text" placeholder="Собщение"></textarea>
+						<textarea name="text" placeholder="Сообщение" required></textarea>
 					</div>
 					<div class="contacts__content_btn">
 						<button class="btn">Заказать оценку</button>
@@ -689,28 +689,35 @@
 	<div class="modal" id="order">
 		<form action="sendmail.php" class="form" method="post">
 
-			<button class="close order_close" type="button">
+			<button class="modal__close order_close" type="button">
 				<span></span>
 				<span></span>
 			</button>
 
-			<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+			<h3>Заказать услугу </h3>
 			<input type="hidden" name="subject" value="Узнать подробнее!">
 
-			<div class="">
+			<div class="hero__form_line">
 				<input type="text" name="name" placeholder="Имя" required>
 			</div>
-			<div class="">
+			<div class="hero__form_line">
 				<input type="tel" name="phone" placeholder="Телефон" required>
 			</div>
-			<div class="">
-				<button type="submit" class="btn" name="submit">Отправить</button>
+			<div class="hero__form_line">
+				<input type="email" name="mail" placeholder="Email" required>
+			</div>
+			<div class="hero__form_checkbox">
+				<input type="checkbox" id="remember" checked required>
+				<label for="remember">даю согласие на сбор, обработку, использование моих персональных данных</label>
+			</div>
+			<div class="hero__form_btn">
+				<button class="btn">Заказать оценку</button>
 			</div>
 		</form>
 	</div>
 
 	<div class="modal" id="thanks">
-		<button class="close thanks_close" type="button">
+		<button class="modal__close thanks_close" type="button">
 			<span></span>
 			<span></span>
 		</button>

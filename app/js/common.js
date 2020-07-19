@@ -16,8 +16,6 @@ $(function() {
     }
   });
 
-
-
 //-------------------------------select---------------------------------------
   $('select').styler({
     selectSearch: true
@@ -54,11 +52,15 @@ $(function() {
       messages: {
         name: "Введите Ваше имя",
         phone: "Введите Ваш телефон",
+        mail: "Введите Вашу почту",
+        text: "Введите Вашe Сообщение",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          mail: jQuery('.form-' + index).find("input[name=mail]").val(),
+          text: jQuery('.form-' + index).find("input[name=text]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
@@ -81,6 +83,7 @@ $(function() {
       }
     });
   }
+
 
 //------------------------------acardeon---------------------------
   $(".block__content").slideUp("slow");
@@ -115,17 +118,11 @@ $(function() {
   }
 
 //-------------------------скорость якоря---------------------------------------
-  $(".header__list").on("click","a", function (event) {
+  $(".click").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
-  //--------------------закриття меню при кліку на ссилку якоря--------------------
-     // $('.hamburger').removeClass('hamburger--active');
-     // $('.header-menu').removeClass('header-menu');
-     // $('.header--active').removeClass('header--active');
-     // $('.nav--active').removeClass('nav--active');
-
+      $('body,html').animate({scrollTop: top - 150}, 'slow', 'swing');
   });
 
 //-------------------------------анімація цифр---------------------------------------
