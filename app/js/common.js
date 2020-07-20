@@ -1,20 +1,20 @@
 $(function() {
 
-//-------------------------------property---------------------------------------
-  $(".property__item_text").slideUp("slow");
+// //-------------------------------property---------------------------------------
+//   $(".property__item_text").slideUp("slow");
 
-  $(".property__item").hover( function(){
-    if ($(this).hasClass('active')) {
-      $(this).removeClass('active');
-      $(".property__item_text").slideUp("slow");
-    }
-    else {
-      $(".active .property__item_text").slideUp("slow");
-      $(".active").removeClass('active');
-      $(this).addClass('active');
-      $(".active .property__item_text").slideDown("slow");
-    }
-  });
+//   $(".property__item").hover( function(){
+//     if ($(this).hasClass('active')) {
+//       $(this).removeClass('active');
+//       $(".property__item_text").slideUp("slow");
+//     }
+//     else {
+//       $(".active .property__item_text").slideUp("slow");
+//       $(".active").removeClass('active');
+//       $(this).addClass('active');
+//       $(".active .property__item_text").slideDown("slow");
+//     }
+//   });
 
 //-------------------------------select---------------------------------------
   $('select').styler({

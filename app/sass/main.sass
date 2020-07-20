@@ -30,7 +30,7 @@
 	align-items: center
 	padding-left: 50px
 	padding-right: 50px
-	box-shadow: 0 0 10px 0 rgba($accent, .7)
+	box-shadow: 0 0 10px 0 rgba($text, .3)
 	
 	&::before
 		content: ''
@@ -536,7 +536,7 @@ h2
 		justify-content: center
 		flex-direction: column
 		width: 33.3333%
-		height: 280px
+		min-height: 280px
 		padding: 10px 10px 40px 10px
 		+transition
 
@@ -554,19 +554,38 @@ h2
 			width: 100%
 			max-width: 320px
 
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			+transition
+
 		&:first-child
 			margin-bottom: 20px
 
 		&:hover,
 		&:focus
-			background-color: rgba(#fff, .25)
-			// transform: rotateY(-360deg)
+			&::before
+				transform: rotateY(-360deg)
+				background-color: rgba(#fff, .25)
 
 			.btn
+				transform: rotateY(-360deg)
 				opacity: 1
 
-			.property__item_text
-				opacity: 1
+			.property__item
+
+				&_title
+					transform: rotateY(-360deg)
+
+				&_text
+					opacity: 1
+					visibility: visible
+					transform: rotateY(-360deg)
+					height: 100%
 
 		&_title
 			display: flex
@@ -575,6 +594,7 @@ h2
 			text-transform: uppercase
 			color: #ffffff
 			font-weight: 700
+			+transition
 
 			+r(992)
 				font-size: 14px
@@ -597,6 +617,9 @@ h2
 			color: #ffffff
 			padding: 12px 0
 			opacity: 0
+			visibility: hidden
+			height: 0
+			+transition
 
 			p
 				text-indent: 15px
@@ -641,6 +664,9 @@ h2
 			background-color: #ffffff
 
 		&_title
+			color: $text
+
+		&_text
 			color: $text
 
 
@@ -999,9 +1025,6 @@ h2
 		&:focus
 			text-decoration: underline
 			color: $orange
-
-
-
 
 
 @import "page"
