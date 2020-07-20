@@ -1,21 +1,5 @@
 $(function() {
 
-// //-------------------------------property---------------------------------------
-//   $(".property__item_text").slideUp("slow");
-
-//   $(".property__item").hover( function(){
-//     if ($(this).hasClass('active')) {
-//       $(this).removeClass('active');
-//       $(".property__item_text").slideUp("slow");
-//     }
-//     else {
-//       $(".active .property__item_text").slideUp("slow");
-//       $(".active").removeClass('active');
-//       $(this).addClass('active');
-//       $(".active .property__item_text").slideDown("slow");
-//     }
-//   });
-
 //-------------------------------select---------------------------------------
   $('select').styler({
     selectSearch: true
@@ -54,13 +38,15 @@ $(function() {
         phone: "Введите Ваш телефон",
         mail: "Введите Вашу почту",
         text: "Введите Вашe Сообщение",
+        select: "Введите Поле",
       },
       submitHandler: function(form) {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
           mail: jQuery('.form-' + index).find("input[name=mail]").val(),
-          text: jQuery('.form-' + index).find("input[name=text]").val(),
+          text: jQuery('.form-' + index).find("textarea[name=text]").val(),
+          select: jQuery('.form-' + index).find("select[name=select]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
