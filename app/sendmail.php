@@ -9,7 +9,8 @@
 		$subject = $_POST['subject'] ? htmlspecialchars(trim($_POST['subject'])) : '';
 		$text = isset($_POST['text']) ? htmlspecialchars(trim($_POST['text'])) : '';
 
-		$to = 'rudolifrudolif@gmail.com';
+		$to = 'info@alomsk.ru';
+		// $to = 'rudolifrudolif@gmail.com';
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
 		$headers .= 'MIME-Version: 1.0' . "\r\n";

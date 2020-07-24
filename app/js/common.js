@@ -73,7 +73,7 @@ $(function() {
 
 //------------------------------acardeon---------------------------
   $(".block__content").slideUp("slow");
-  $(".block").first().addClass('active');
+  // $(".block").first().addClass('active');
   $(".active .block__content").slideDown("slow");
 
   $(".block__header").on("click", function(){
