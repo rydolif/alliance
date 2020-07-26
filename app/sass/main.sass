@@ -159,12 +159,18 @@ h2
 				color: $accent
 
 	&__tel
-		font-weight: 700
-		color: $accent
+		display: flex
+		flex-direction: column
+		text-align: right
 
-		&:hover,
-		&:focus
-			color: $text
+
+		a
+			font-weight: 700
+			color: $accent
+
+			&:hover,
+			&:focus
+				color: $text
 
 
 .item
@@ -536,7 +542,7 @@ h2
 		justify-content: center
 		flex-direction: column
 		width: 33.3333%
-		min-height: 290px
+		min-height: 300px
 		padding: 10px 10px 40px 10px
 		+transition
 
@@ -594,6 +600,7 @@ h2
 			text-transform: uppercase
 			color: #ffffff
 			font-weight: 700
+			margin-bottom: 15px
 			+transition
 
 			+r(992)
@@ -1045,6 +1052,8 @@ h2
 	text-align: center
 	text-indent: 0 !important
 
+.margin
+	margin-bottom: 20px
 
 .remove-link
 	cursor: default
